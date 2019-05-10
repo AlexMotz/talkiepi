@@ -36,6 +36,7 @@ func main() {
 	if len(*username) == 0 {
 
 		out, err := exec.Command("sed -n '/^Serial/{s/.* //;p}' /proc/cpuinfo").Output()
+		// out, err := exec.Command("sed -n 's/^Serial\s*: 0*//p' /proc/cpuinfo").Output()
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "%s\n", err)
 				os.Exit(1)
@@ -50,7 +51,8 @@ func main() {
 		// }
 
 		// buf[0] |= 2
-		b.Config.Username = fmt.Sprintf("talkiepi-" + string(out))
+		b.Config.Username = "talkiepi-" + out
+		// b.Config.Username = fmt.Sprintf("talkiepi-%s", out)
 		// b.Config.Username = fmt.Sprintf("talkiepi-%02x%02x%02x%02x%02x%02x", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5])
 	} else {
 		b.Config.Username = *username

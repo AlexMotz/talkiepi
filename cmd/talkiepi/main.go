@@ -50,7 +50,7 @@ func main() {
 		// }
 
 		// buf[0] |= 2
-		b.Config.Username = fmt.Sprintf("talkiepi-" + + string(out))
+		b.Config.Username = fmt.Sprintf("talkiepi-" + string(out))
 		// b.Config.Username = fmt.Sprintf("talkiepi-%02x%02x%02x%02x%02x%02x", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5])
 	} else {
 		b.Config.Username = *username

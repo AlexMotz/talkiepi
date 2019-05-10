@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/dchote/gpio"
-	"github.com/stianeikeland/go-rpio"
+	"github.com/alexmotz/gpio"
+	"github.com/alexmotz/go-rpio"
 )
 
 func (b *Talkiepi) initGPIO() {

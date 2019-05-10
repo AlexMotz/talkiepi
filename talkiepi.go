@@ -3,16 +3,16 @@ package talkiepi
 import (
 	"crypto/tls"
 
-	"github.com/dchote/gpio"
-	"github.com/dchote/gumble/gumble"
-	"github.com/dchote/gumble/gumbleopenal"
+	"github.com/alexmotz/gpio"
+	"github.com/alexmotz/gumble/gumble"
+	"github.com/alexmotz/gumble/gumbleopenal"
 )
 
 // Raspberry Pi GPIO pin assignments (CPU pin definitions)
 const (
-	OnlineLEDPin       uint = 18
+	OnlineLEDPin       uint = 24
 	ParticipantsLEDPin uint = 23
-	TransmitLEDPin     uint = 24
+	TransmitLEDPin     uint = 12
 	ButtonPin          uint = 25
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"crypto/rand"
+	// "crypto/rand"
 	"crypto/tls"
 	"flag"
 	"fmt"
@@ -37,7 +37,7 @@ func main() {
 
 		out, err := exec.Command("sed -n '/^Serial/{s/.* //;p}' /proc/cpuinfo").Output()
 			if err != nil {
-				log.Fatal(err)
+				fmt.Fprintf(os.Stderr, "%s\n", err)
 				os.Exit(1)
 			}
 			// fmt.Printf("The date is %s\n", out)

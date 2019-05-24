@@ -1,7 +1,7 @@
 package main
 
 import (
-	// "crypto/rand"
+	"crypto/rand"
 	"crypto/tls"
 	"flag"
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/alexmotz/talkiepi"
 	"os"
 	"os/signal"
-	"os/exec"
+	// "os/exec"
 	"syscall"
 )
 
